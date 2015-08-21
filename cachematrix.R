@@ -44,10 +44,9 @@ cacheSolve <- function(x, ...) {
         }
         
         data <- x$get()
-        
         ##calucutes the inverse of the matrix by using R built in Funtion Solve if result is not in Cache
         m <- solve(data)
-        x$setinverse(x)
-        
+        x$setinverse(m)
         return(m)
 }
+
